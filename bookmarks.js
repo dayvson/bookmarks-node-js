@@ -19,8 +19,8 @@ app.configure(function() {
 app.get("/", HomeController.index);
 app.get('/search', HomeController.search);
 app.get("/list", HomeController.listAll);
-app.put("/add/create", HomeController.addNew);
-app.get("/add", HomeController.add);
+app.put("/save", HomeController.save);
+app.get("/create", HomeController.create);
 app.get("/remove/:id", HomeController.remove);
 
 //Inicializa o Servidor
