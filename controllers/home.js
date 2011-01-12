@@ -1,4 +1,4 @@
-var BookmarkModel = require('../model/database').BookmarkModel;
+var BookmarkModel = require('../model/bookmark_model').BookmarkModel;
 //Instanciando o BookmarkModel
 var bookModel = new BookmarkModel();
 //Criando o controller da Home.
@@ -12,13 +12,15 @@ var HomeController = {
   },
   listAll:function(req, res){
     bookModel.findAll(function(err,items){
-      res.render('index', {
+      res.render('list', {
         locals: {'links': items, 'title': 'Bookmarks Application'}
       });
     });
   },
   create: function(req, res){
-    res.render('add', {'title': 'Adicionar link'});
+    res.render('add', {
+      locals:{'title': 'Adicionar link'}
+    });
   },
   save: function(req, res){
     var doc = {name:req.body.book_name, url: req.body.book_url};
