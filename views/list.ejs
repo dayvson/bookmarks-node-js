@@ -1,0 +1,5 @@
+<ul>
+<% for (var i=0; i < links.length; i++) { %>
+  <li><%= links[i].name %> ----- <%= links[i].url %> - <a href="/remove/<%= links[i]._id.toHexString() %>">remover</a></li>
+<% } %>
+</ul>
