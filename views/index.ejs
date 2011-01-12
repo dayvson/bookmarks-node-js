@@ -1,6 +1,6 @@
-<a href="/add">Adicionar Link</a> | <a href="/list">Listar</a>
+<a href="/create">Adicionar Link</a> | <a href="/list">Listar</a>
 <ul>
 <% for (var i=0; i < links.length; i++) { %>
-  <li><%= links[i].name %> ----- <%= links[i].url %> - <a href="/remove/<%= links[i].id %>">remover</a></li>
+  <li><%= links[i].name %> ----- <%= links[i].url %></li>
 <% } %>
 </ul>
